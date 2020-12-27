@@ -19,6 +19,9 @@ var addcatRouter = require('./routes/add-new-category');
 var passwordCategory = require('./routes/passwordCategory');
 var addpassRouter = require('./routes/add-new-password');
 var viewCategory = require('./routes/view-all-password');
+var addCategoryApi = require('./api/add_category');
+var addProductApi = require('./api/product');
+var userApi = require('./api/user');
 
 
 
@@ -43,9 +46,11 @@ app.use('/add-new-category', addcatRouter);
 app.use('/passwordCategory', passwordCategory);
 app.use('/add-new-password', addpassRouter);
 app.use('/view-all-password', viewCategory);
+app.use('/api', addCategoryApi);
+app.use('/productApi', addProductApi);
+app.use('/userApi', userApi);
 
-
-
+ 
 
 
 

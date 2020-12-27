@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const mongoosepaginate = require('mongoose-paginate');
 const passSchema = new mongoose.Schema({
     password_category: {
-        type: String,
+        type: String,ref: "password_categories",
         required: true,
         index: {
             unique: true
